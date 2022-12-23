@@ -1,0 +1,13 @@
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if (v:IsA("Accessory")) then
+        v.Handle:BreakJoints()
+    end
+end  
+wait(0.3)
+game:GetService("RunService").Heartbeat:Connect(function()
+    for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+         if (v:IsA("Accessory")) then
+             v.Handle.CFrame = game.Players.LocalPlayer.Character.Head.CFrame
+         end
+    end  
+end)
