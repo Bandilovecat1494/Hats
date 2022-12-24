@@ -1,5 +1,5 @@
 for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
     if (v:IsA("Accessory")) then
-        v.Handle.Mesh:Destroy()
+        v.Handle:FindFirstChildOfClass("SpecialMesh"):Destroy()
     end
 end
